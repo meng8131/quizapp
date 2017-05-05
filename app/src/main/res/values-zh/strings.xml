@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="final_score">您的最终分数是：</string>
+    <string name="hint_country">您的国家</string>
+    <string name="hint_name">您的姓名</string>
+    <string name="hint_role"></string>
+    <string name="personal_info">登记个人信息</string>
+    <string name="question_1">以下哪个最适合给3个月大的婴儿做主食？</string>
+    <string name="question_1_answer">正确答案是 母乳！</string>
+    <string name="question_1_option_1">母乳</string>
+    <string name="question_1_option_2">牛奶</string>
+    <string name="question_1_option_3">米饭</string>
+    <string name="question_1_option_4">水果</string>
+    <string name="question_2">哪个可以给6个月大的婴儿做辅食？</string>
+    <string name="question_2_answer">正确答案是 米粉和牛肉泥！</string>
+    <string name="question_2_option_1">米粉</string>
+    <string name="question_2_option_2">牛肉泥</string>
+    <string name="question_2_option_3">炸鸡</string>
+    <string name="question_3">婴儿多大可以开始断奶？</string>
+    <string name="question_3_answer">正确答案是 12个月！</string>
+    <string name="question_3_option_1">6个月</string>
+    <string name="question_3_option_2">9个月</string>
+    <string name="question_3_option_3">12个月</string>
+    <string name="question_4">请分享一下您对生养小孩的感受！</string>
+    <string name="question_4_hint">比如宝宝出生时您的感受和您抚养宝宝的宝贵经验等。</string>
+    <string name="quiz_description">这份测验是要测试抚养婴儿的基本常识。</string>
+    <string name="quiz_introduction">测验介绍</string>
+    <string name="quiz_list">测试问题</string>
+    <string name="review">订正</string>
+    <string name="role_1">妈妈</string>
+    <string name="role_2">爸爸</string>
+    <string name="score_hint">提交后查看分数</string>
+    <string name="submit">提交</string>
+    <string name="toast_info_no_answer">请补充您的个人信息！</string>
+    <string name="toast_question_1_no_answer">请回答问题1！</string>
+    <string name="toast_question_2_no_answer">请回答问题2！</string>
+    <string name="your_role">您是</string>
+    <string name="toast_question_3_no_answer">请回答问题3！</string>
+    <string name="toast_question_4_no_answer">请回答问题4！</string>
+</resources>
