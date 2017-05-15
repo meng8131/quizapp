@@ -2,6 +2,7 @@ package com.example.android.quizapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void scoreReview(View view) {
-//        if (if_answered_info()){
+        if (if_answered_info()){
             TextView answer_1 = (TextView) findViewById(R.id.answer_question_1);
             answer_1.setText(getString(R.string.question_1_answer));
 
@@ -55,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
             TextView answer_3 = (TextView) findViewById(R.id.answer_question_3);
             answer_3.setText(getString(R.string.question_3_answer));
-//        }
+        } else {
+            Toast.makeText(getApplicationContext(),getString(R.string.toast_info_no_answer), Toast.LENGTH_SHORT).show();
+        }
     }
 
     private boolean if_answered_question_1() {
@@ -127,27 +130,27 @@ public class MainActivity extends AppCompatActivity {
  *  check if personal info is answered before review the right answers
  *  please help why this is not working
  */
-//    private boolean if_answered_info() {
-//        EditText info_name = (EditText) findViewById(R.id.info_name);
-//        String nameEdited = info_name.getText().toString();
-//
-//        EditText info_country = (EditText) findViewById(R.id.info_country);
-//        String countryEdited = info_country.getText().toString();
-//
-//        RadioButton role_1 = (RadioButton) findViewById(R.id.info_role_1);
-//        RadioButton role_2 = (RadioButton) findViewById(R.id.info_role_2);
-//
-//        boolean info_answered = false;
-//
-//        if (nameEdited.matches("") & countryEdited.matches("")){
-//            if (role_1.isChecked() | role_2.isChecked()){
-//                info_answered = true;
-//            } else {
-//                Toast.makeText(getApplicationContext(), getString(R.string.toast_info_no_answer), Toast.LENGTH_SHORT);
-//            }
-//        } else {
-//            Toast.makeText(getApplicationContext(), getString(R.string.toast_info_no_answer), Toast.LENGTH_SHORT);
-//        }
-//        return info_answered;
-//    }
+    private boolean if_answered_info() {
+        EditText info_name = (EditText) findViewById(R.id.info_name);
+        String nameEdited = info_name.getText().toString();
+
+        EditText info_country = (EditText) findViewById(R.id.info_country);
+        String countryEdited = info_country.getText().toString();
+
+        RadioButton role_1 = (RadioButton) findViewById(R.id.info_role_1);
+        RadioButton role_2 = (RadioButton) findViewById(R.id.info_role_2);
+
+        boolean info_answered = false;
+
+        if (!TextUtils.isEmpty(nameEdited) && !TextUtils.isEmpty((countryEdited))){
+            if (role_1.isChecked() | role_2.isChecked()){
+                info_answered = true;
+            } else {
+                Toast.makeText(getApplicationContext(), getString(R.string.toast_info_no_answer), Toast.LENGTH_SHORT);
+            }
+        } else {
+            Toast.makeText(getApplicationContext(), getString(R.string.toast_info_no_answer), Toast.LENGTH_SHORT);
+        }
+        return info_answered;
+    }
 }

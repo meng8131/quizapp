@@ -177,7 +177,7 @@
                         android:id="@+id/quiz_3">
                         <TextView
                             style="@style/questionTitle"
-                            android:text="@string/question_1"/>
+                            android:text="@string/question_3"/>
                         <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
