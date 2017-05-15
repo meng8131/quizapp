@@ -56,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
             TextView answer_3 = (TextView) findViewById(R.id.answer_question_3);
             answer_3.setText(getString(R.string.question_3_answer));
-        } else {
-            Toast.makeText(getApplicationContext(),getString(R.string.toast_info_no_answer), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -146,10 +144,10 @@ public class MainActivity extends AppCompatActivity {
             if (role_1.isChecked() | role_2.isChecked()){
                 info_answered = true;
             } else {
-                Toast.makeText(getApplicationContext(), getString(R.string.toast_info_no_answer), Toast.LENGTH_SHORT);
+                Toast.makeText(getApplicationContext(), getString(R.string.toast_info_no_answer), Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(getApplicationContext(), getString(R.string.toast_info_no_answer), Toast.LENGTH_SHORT);
+            Toast.makeText(getApplicationContext(), getString(R.string.toast_info_no_answer), Toast.LENGTH_SHORT).show();
         }
         return info_answered;
     }
